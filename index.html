@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto load</title>
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 600px;
+        height: 400px;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "http://i.imgur.com/Du86DFY.jpg",
+    "autoLoad": true,
+    "hotSpots": [
+        {
+            "pitch": 14.1,
+            "yaw": 1.5,
+            "cssClass": "custom-hotspot",
+            // "createTooltipFunc": hotspot,
+            // "createTooltipArgs": "Baltimore Museum of Art",
+            "clickHandlerFunc": function() {
+                alert("Hi there!");
+            }
+        },
+        {
+            "pitch": -9.4,
+            "yaw": 222.6,
+            "cssClass": "custom-hotspot",
+            // "createTooltipFunc": hotspot,
+            // "createTooltipArgs": "Art Museum Drive",
+            "clickHandlerFunc": function() {
+                alert("Hi there!");
+            }
+        },
+        {
+            "pitch": -0.9,
+            "yaw": 144.4,
+            "cssClass": "custom-hotspot",
+            // "createTooltipFunc": hotspot,
+            // "createTooltipArgs": "North Charles Street",
+            "clickHandlerFunc": function() {
+                alert("Hi there!");
+            }
+        }
+    ]
+    // "hotSpots": [
+    //     {
+    //         "pitch": 14.1,
+    //         "yaw": 1.5,
+    //         "type": "info"
+    //     },
+    //     {
+    //         "pitch": -9.4,
+    //         "yaw": 222.6,
+    //         "type": "info"        
+    //     },
+    //     {
+    //         "pitch": -0.9,
+    //         "yaw": 144.4,
+    //         "type": "info"
+    //     }
+    // ]
+});
+
+</script>
+
+</body>
+</html>

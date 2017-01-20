@@ -1,0 +1,11 @@
+.pnlm-hotspot-base.pnlm-hotspot.pnlm-sprite.pnlm-info {
+    background-image: url('monster.jpg');
+    background-position: 0, 0;
+}
+
+.custom-hotspot {
+    background-image: url('monster.jpg');
+    height: 26px;
+    width: 26px;
+    border-radius: 100px;
+}
