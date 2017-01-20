@@ -18,62 +18,75 @@
 
 <div id="panorama"></div>
 <script>
-pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "https://i.imgur.com/Du86DFY.jpg",
-    "autoLoad": true,
-    "hotSpots": [
-        {
-            "pitch": 14.1,
-            "yaw": 1.5,
-            "cssClass": "custom-hotspot",
-            // "createTooltipFunc": hotspot,
-            // "createTooltipArgs": "Baltimore Museum of Art",
-            "clickHandlerFunc": function() {
-                alert("Hi there!");
-            }
-        },
-        {
-            "pitch": -9.4,
-            "yaw": 222.6,
-            "cssClass": "custom-hotspot",
-            // "createTooltipFunc": hotspot,
-            // "createTooltipArgs": "Art Museum Drive",
-            "clickHandlerFunc": function() {
-                alert("Hi there!");
-            }
-        },
-        {
-            "pitch": -0.9,
-            "yaw": 144.4,
-            "cssClass": "custom-hotspot",
-            // "createTooltipFunc": hotspot,
-            // "createTooltipArgs": "North Charles Street",
-            "clickHandlerFunc": function() {
-                alert("Hi there!");
-            }
-        }
-    ]
-    // "hotSpots": [
-    //     {
-    //         "pitch": 14.1,
-    //         "yaw": 1.5,
-    //         "type": "info"
-    //     },
-    //     {
-    //         "pitch": -9.4,
-    //         "yaw": 222.6,
-    //         "type": "info"        
-    //     },
-    //     {
-    //         "pitch": -0.9,
-    //         "yaw": 144.4,
-    //         "type": "info"
-    //     }
-    // ]
-});
+    var clickHandler1 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": 14.1,
+                "yaw": -130.5,
+                "cssClass": "custom-hotspot",
+                "clickHandlerFunc": clickHandler2
+            });
+    };
+    var clickHandler2 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": 8.1,
+                "yaw": 5,
+                "cssClass": "custom-hotspot",
+                "clickHandlerFunc": clickHandler3
+            });
+    };
+    var clickHandler3 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "custom-hotspot",
+                "clickHandlerFunc": clickHandler4
+            });
+    };
+    var clickHandler4 = function(e) {
+        e.target.remove();
+        alert("Great! You found all the monsters!");
+    }
 
+    var viewer = pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "https://i.imgur.com/Du86DFY.jpg",
+        "autoLoad": true,
+        "hotSpots": [
+            {
+                "pitch": 14.1,
+                "yaw": 12.5,
+                "cssClass": "custom-hotspot",
+                "clickHandlerFunc": clickHandler1
+            }
+            // {
+            //     "pitch": -9.4,
+            //     "yaw": 222.6,
+            //     "cssClass": "custom-hotspot",
+            //     "clickHandlerFunc": function() {
+            //         alert("Hi there!");
+            //     }
+            // },
+            // {
+            //     "pitch": -0.9,
+            //     "yaw": 144.4,
+            //     "cssClass": "custom-hotspot",
+            //     "clickHandlerFunc": function() {
+            //         alert("Hi there!");
+            //     }
+            // }
+        ]
+    });
+
+    var fullScreen = function() {
+        viewer.toggleFullscreen();
+    };
 </script>
+<div class="full-screen-wrapper">
+    <button onclick="fullScreen()" class="full-screen-button">Show in full screen (RECOMMENDED!)</button>
+</div>
 
 </body>
 </html>
