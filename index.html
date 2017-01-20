@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
+<div class="full-screen-wrapper">
+    <button onclick="fullScreen()" class="full-screen-button">Show in full screen (RECOMMENDED!)</button>
+</div>
 <div id="panorama"></div>
 <script>
     var clickHandler1 = function(e) {
@@ -61,22 +63,6 @@
                 "cssClass": "custom-hotspot",
                 "clickHandlerFunc": clickHandler1
             }
-            // {
-            //     "pitch": -9.4,
-            //     "yaw": 222.6,
-            //     "cssClass": "custom-hotspot",
-            //     "clickHandlerFunc": function() {
-            //         alert("Hi there!");
-            //     }
-            // },
-            // {
-            //     "pitch": -0.9,
-            //     "yaw": 144.4,
-            //     "cssClass": "custom-hotspot",
-            //     "clickHandlerFunc": function() {
-            //         alert("Hi there!");
-            //     }
-            // }
         ]
     });
 
@@ -84,9 +70,6 @@
         viewer.toggleFullscreen();
     };
 </script>
-<div class="full-screen-wrapper">
-    <button onclick="fullScreen()" class="full-screen-button">Show in full screen (RECOMMENDED!)</button>
-</div>
 
 </body>
 </html>

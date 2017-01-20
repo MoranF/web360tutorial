@@ -9,3 +9,12 @@
     width: 26px;
     border-radius: 100px;
 }
+
+.full-screen-wrapper {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.full-screen-button {
+    height: 40px;
+}
