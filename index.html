@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto load</title>
+    <title>Find the monsters</title>
     <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
     <style>
     #panorama {
-        width: 100%;
-        height: 400px;
+        width: 1px;
+        height: 1px;
     }
     </style>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <div class="full-screen-wrapper">
-    <button onclick="fullScreen()" class="full-screen-button">Show in full screen (RECOMMENDED!)</button>
+    <button onclick="fullScreen()" class="full-screen-button">Start Game</button>
 </div>
 <div id="panorama"></div>
 <script>
     var clickHandler1 = function(e) {
         e.target.remove();
         viewer.addHotSpot({
-                "pitch": 14.1,
-                "yaw": -130.5,
-                "cssClass": "custom-hotspot",
+                "pitch": -33,
+                "yaw": 90,
+                "cssClass": "monster2",
                 "clickHandlerFunc": clickHandler2
             });
     };
@@ -34,7 +34,7 @@
         viewer.addHotSpot({
                 "pitch": 8.1,
                 "yaw": 5,
-                "cssClass": "custom-hotspot",
+                "cssClass": "monster3",
                 "clickHandlerFunc": clickHandler3
             });
     };
@@ -43,24 +43,80 @@
         viewer.addHotSpot({
                 "pitch": -0.9,
                 "yaw": 144,
-                "cssClass": "custom-hotspot",
+                "cssClass": "monster4",
                 "clickHandlerFunc": clickHandler4
             });
     };
     var clickHandler4 = function(e) {
         e.target.remove();
-        alert("Great! You found all the monsters!");
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "monster5",
+                "clickHandlerFunc": clickHandler5
+            });
+    };
+    var clickHandler5 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "monster6",
+                "clickHandlerFunc": clickHandler6
+            });
+    };
+    var clickHandler6 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "monster7",
+                "clickHandlerFunc": clickHandler7
+            });
+    };
+    var clickHandler7 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "monster8",
+                "clickHandlerFunc": clickHandler8
+            });
+    };
+    var clickHandler8 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "monster9",
+                "clickHandlerFunc": clickHandler9
+            });
+    };
+    var clickHandler9 = function(e) {
+        e.target.remove();
+        viewer.addHotSpot({
+                "pitch": -0.9,
+                "yaw": 144,
+                "cssClass": "monster10",
+                "clickHandlerFunc": clickHandler10
+            });
+    };
+    var clickHandler10 = function(e) {
+        e.target.remove();
+        //alert("Great! You found all the monsters!");
+        fullScreen();
     }
 
     var viewer = pannellum.viewer('panorama', {
         "type": "equirectangular",
-        "panorama": "https://i.imgur.com/Du86DFY.jpg",
+        "panorama": "example360.jpg",
+        "mouseZoom": false,
         "autoLoad": true,
         "hotSpots": [
             {
-                "pitch": 14.1,
-                "yaw": 12.5,
-                "cssClass": "custom-hotspot",
+                "pitch": -31,
+                "yaw": -23,
+                "cssClass": "monster1",
                 "clickHandlerFunc": clickHandler1
             }
         ]
@@ -69,6 +125,210 @@
     var fullScreen = function() {
         viewer.toggleFullscreen();
     };
+
+    var clickHandler = function() {
+        fullScreen();
+    }
+
+
+
+
+
+
+    // var viewer = pannellum.viewer('panorama', {   
+    //     "default": {
+    //         "firstScene": "monster1",
+    //         "mouseZoom": false,
+    //         "autoLoad": true
+    //         // "author": "Matthew Petroff",
+    //         // "sceneFadeDuration": 1000
+    //     },
+
+    //     "scenes": {
+    //         "monster1": {
+    //             // "title": "Mason Circle",
+    //             "hfov": 120,
+    //             // "pitch": -3,
+    //             // "yaw": 117,
+    //             "type": "equirectangular",
+    //             "panorama": "example360.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster1",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "house"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster2": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster2",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster3"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster3": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster3",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster4"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster4": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster4",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster5"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster5": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster5",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster6"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster6": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster6",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster7"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster7": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster7",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster8"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster8": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster8",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster9"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster9": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster9",
+    //                     // "clickHandlerFunc": clickHandler1,
+    //                     "sceneId": "monster10"
+    //                 }
+    //             ]
+    //         },
+
+    //         "monster10": {
+    //             // "title": "Spring House or Dairy",
+    //             "hfov": 120,
+    //             "pitch": -31,
+    //             "yaw": -23,
+    //             "type": "equirectangular",
+    //             "panorama": "example3601.jpg",
+    //             "hotSpots": [
+    //                 {
+    //                     "pitch": -31,
+    //                     "yaw": -23,
+    //                     "cssClass": "monster10",
+    //                     "clickHandlerFunc": clickHandler,
+    //                     // "sceneId": "monster3"
+    //                 }
+    //             ]
+    //         }
+    //     }
+    // });
+
+
+
 </script>
 
 </body>
