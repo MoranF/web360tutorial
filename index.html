@@ -35,302 +35,6 @@
 </div>
 <div id="panorama"></div>
 <script>
-    // var clickHandler1 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -33,
-    //             "yaw": 90,
-    //             "cssClass": "monster2",
-    //             "clickHandlerFunc": clickHandler2
-    //         });
-    // };
-    // var clickHandler2 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": 15,
-    //             "yaw": 5.5,
-    //             "cssClass": "monster3",
-    //             "clickHandlerFunc": clickHandler3
-    //         });
-    // };
-    // var clickHandler3 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -18,
-    //             "yaw": 123,
-    //             "cssClass": "monster4",
-    //             "clickHandlerFunc": clickHandler4
-    //         });
-    // };
-    // var clickHandler4 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -0.9,
-    //             "yaw": 144,
-    //             "cssClass": "monster5",
-    //             "clickHandlerFunc": clickHandler5
-    //         });
-    // };
-    // var clickHandler5 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -0.9,
-    //             "yaw": 144,
-    //             "cssClass": "monster6",
-    //             "clickHandlerFunc": clickHandler6
-    //         });
-    // };
-    // var clickHandler6 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -0.9,
-    //             "yaw": 144,
-    //             "cssClass": "monster7",
-    //             "clickHandlerFunc": clickHandler7
-    //         });
-    // };
-    // var clickHandler7 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -0.9,
-    //             "yaw": 144,
-    //             "cssClass": "monster8",
-    //             "clickHandlerFunc": clickHandler8
-    //         });
-    // };
-    // var clickHandler8 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -0.9,
-    //             "yaw": 144,
-    //             "cssClass": "monster9",
-    //             "clickHandlerFunc": clickHandler9
-    //         });
-    // };
-    // var clickHandler9 = function(e) {
-    //     e.target.remove();
-    //     viewer.addHotSpot({
-    //             "pitch": -0.9,
-    //             "yaw": 144,
-    //             "cssClass": "monster10",
-    //             "clickHandlerFunc": clickHandler10
-    //         });
-    // };
-    // var clickHandler10 = function(e) {
-    //     e.target.remove();
-    //     $('#endGameMessage').css("display", "block");
-    //     $('#startGameMessage').css("display", "none");
-    //     $('#fullScreenButton').css("display", "none");
-    //     fullScreen();
-    // }
-
-    // var viewer = pannellum.viewer('panorama', {
-    //     "type": "equirectangular",
-    //     "panorama": "example360.jpg",
-    //     "mouseZoom": false,
-    //     "autoLoad": true,
-    //     "hotSpots": [
-    //         {
-    //             "pitch": -31,
-    //             "yaw": -23,
-    //             "cssClass": "monster1",
-    //             "clickHandlerFunc": clickHandler1
-    //         }
-    //     ]
-    // });
-
-
-    var viewer = pannellum.viewer('panorama', {   
-        "default": {
-            "firstScene": "monster1",
-            "mouseZoom": false,
-            "autoLoad": true
-            // "author": "Matthew Petroff",
-            // "sceneFadeDuration": 1000
-        },
-
-        "scenes": {
-            "monster1": {
-                // "title": "Mason Circle",
-                // "hfov": 120,
-                // "pitch": -3,
-                // "yaw": 117,
-                "type": "equirectangular",
-                "panorama": "monster_0000_1.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -30,
-                        "yaw": -20,
-                        "cssClass": "monster1",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster2"
-                    }
-                ]
-            },
-
-            "monster2": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "monster_0001_2.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -33,
-                        "yaw": 85,
-                        "cssClass": "monster2",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster3"
-                    }
-                ]
-            },
-
-            "monster3": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -33,
-                "yaw": 85,
-                "type": "equirectangular",
-                "panorama": "monster_0002_3.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": 15.5,
-                        "yaw": 5.5,
-                        "cssClass": "monster3",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster4"
-                    }
-                ]
-            },
-
-            "monster4": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": 15.5,
-                "yaw": 5.5,
-                "type": "equirectangular",
-                "panorama": "monster_0003_4.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster4",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster5"
-                    }
-                ]
-            },
-
-            "monster5": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "monster_0004_5.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster5",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster6"
-                    }
-                ]
-            },
-
-            "monster6": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "example3601.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster6",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster7"
-                    }
-                ]
-            },
-
-            "monster7": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "example3601.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster7",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster8"
-                    }
-                ]
-            },
-
-            "monster8": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "example3601.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster8",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster9"
-                    }
-                ]
-            },
-
-            "monster9": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "example3601.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster9",
-                        // "clickHandlerFunc": clickHandler1,
-                        "sceneId": "monster10"
-                    }
-                ]
-            },
-
-            "monster10": {
-                // "title": "Spring House or Dairy",
-                // "hfov": 120,
-                "pitch": -31,
-                "yaw": -23,
-                "type": "equirectangular",
-                "panorama": "example3601.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -31,
-                        "yaw": -23,
-                        "cssClass": "monster10",
-                        "clickHandlerFunc": clickHandler,
-                        // "sceneId": "monster3"
-                    }
-                ]
-            }
-        }
-    });
 
     var fullScreen = function() {
         viewer.toggleFullscreen();
@@ -347,6 +51,164 @@
         fullScreen();
         $('#fullScreenButton').text('Continue game');
     }
+
+    var viewer = pannellum.viewer('panorama', {   
+        "default": {
+            "firstScene": "monster1",
+            "mouseZoom": false,
+            "autoLoad": true
+        },
+
+        "scenes": {
+            "monster1": {
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0000_1.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -29,
+                        "yaw": -24,
+                        "cssClass": "monster1",
+                        "sceneId": "monster2"
+                    }
+                ]
+            },
+
+            "monster2": {
+                "pitch": -31,
+                "yaw": -23,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0001_2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -33,
+                        "yaw": 85,
+                        "cssClass": "monster2",
+                        "sceneId": "monster3"
+                    }
+                ]
+            },
+
+            "monster3": {
+                "pitch": -33,
+                "yaw": 85,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0002_3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 15.5,
+                        "yaw": 5.5,
+                        "cssClass": "monster3",
+                        "sceneId": "monster4"
+                    }
+                ]
+            },
+
+            "monster4": {
+                "pitch": 15.5,
+                "yaw": 5.5,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0003_4.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -15.5,
+                        "yaw": 123.5,
+                        "cssClass": "monster4",
+                        "sceneId": "monster5"
+                    }
+                ]
+            },
+
+            "monster5": {
+                "pitch": -15.5,
+                "yaw": 123.5,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0004_5.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 17.5,
+                        "yaw": -115,
+                        "cssClass": "monster5",
+                        "sceneId": "monster6"
+                    }
+                ]
+            },
+
+            "monster6": {
+                "pitch": 17.5,
+                "yaw": -115,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0005_6.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 3,
+                        "yaw": 137,
+                        "cssClass": "monster6",
+                        "sceneId": "monster7"
+                    }
+                ]
+            },
+
+            "monster7": {
+                "pitch": 3,
+                "yaw": 137,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0006_7.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 74,
+                        "yaw": 159,
+                        "cssClass": "monster7",
+                        "sceneId": "monster8"
+                    }
+                ]
+            },
+
+            "monster8": {
+                "pitch": 74,
+                "yaw": 159,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0007_8.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -28,
+                        "yaw": 41,
+                        "cssClass": "monster8",
+                        "sceneId": "monster9"
+                    }
+                ]
+            },
+
+            "monster9": {
+                "pitch": -28,
+                "yaw": 41,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0008_9.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 16,
+                        "yaw": -39,
+                        "cssClass": "monster9",
+                        "sceneId": "monster10"
+                    }
+                ]
+            },
+
+            "monster10": {
+                "pitch": 16,
+                "yaw": -39,
+                "type": "equirectangular",
+                "panorama": "backgrounds/monster_0008_10.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -32.5,
+                        "yaw": -157,
+                        "cssClass": "monster10",
+                        "clickHandlerFunc": clickHandler                    
+                    }
+                ]
+            }
+        }
+    });
 
 </script>
 

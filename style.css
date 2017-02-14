@@ -7,63 +7,53 @@
 }
 
 .monster1 {
-    /*background-image: url('monster1.png');*/
-    height: 125px;
-    width: 90px;
+    height: 150px;
+    width: 100px;
 }
 
 .monster2 {
-    /*background-image: url('monster2.png');*/
     height: 70px;
     width: 280px;
 }
 
 .monster3 {
-    /*background-image: url('monster3.png');*/
     height: 40px;
     width: 70px;
 }
 
 .monster4 {
-    /*background-image: url('monster4.png');*/
-    height: 128px;
-    width: 114px;
+    height: 185px;
+    width: 135px;
 }
 
 .monster5 {
-    /*background-image: url('monster5.png');*/
-    height: 129px;
-    width: 104px;
+    height: 210px;
+    width: 160px;
 }
 
 .monster6 {
-    /*background-image: url('monster6.png');*/
-    height: 43px;
-    width: 37px;
+    height: 65px;
+    width: 50px;
 }
 
 .monster7 {
-    /*background-image: url('monster7.png');*/
-    height: 63px;
-    width: 99px;
+    height: 100px;
+    width: 90px;
 }
 
 .monster8 {
-    /*background-image: url('monster8.png');*/
-    height: 126px;
-    width: 142px;
+    height: 195px;
+    width: 160px;
 }
 
 .monster9 {
-    /*background-image: url('monster9.png');*/
-    height: 83px;
-    width: 48px;
+    height: 120px;
+    width: 90px;
 }
 
 .monster10 {
-    /*background-image: url('monster10.png');*/
-    height: 107px;
-    width: 96px;
+    height: 175px;
+    width: 145px;
 }
 
 .full-screen-wrapper {
@@ -82,4 +72,6 @@
 
 #endGameMessage {
     display: none;
+    font-weight: bold;
+    font-size: 20px;
 }
